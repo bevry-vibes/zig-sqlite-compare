@@ -1,0 +1,12 @@
+.{
+    .name = .vrischmann,
+    .version = "0.0.1",
+    .fingerprint = 0x22a3c21b1a7d1e36,
+    .dependencies = .{
+        .sqlite = .{
+            .url = "git+https://github.com/vrischmann/zig-sqlite.git",
+            .hash = "sqlite-3.48.0-F2R_azCQDgBGaWDIX4g2vxKpuqzYEQOOfAeJGMNocPu0",
+        },
+    },
+    .paths = .{""},
+}

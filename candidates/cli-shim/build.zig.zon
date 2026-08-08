@@ -1,0 +1,6 @@
+.{
+    .name = .cli_shim,
+    .version = "0.0.1",
+    .fingerprint = 0x5a9a00c99312f306,
+    .paths = .{""},
+}

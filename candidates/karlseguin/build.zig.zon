@@ -1,0 +1,12 @@
+.{
+    .name = .karlseguin,
+    .version = "0.0.1",
+    .fingerprint = 0x156ccc88cef0d763,
+    .dependencies = .{
+        .zqlite = .{
+            .url = "git+https://github.com/karlseguin/zqlite.zig",
+            .hash = "zqlite-0.0.1-RWLaY8M8nAATkeYO5Y0xfknbKMga46lgeT0vGKvTwfMK",
+        },
+    },
+    .paths = .{""},
+}

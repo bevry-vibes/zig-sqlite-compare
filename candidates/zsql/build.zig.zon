@@ -1,0 +1,12 @@
+.{
+    .name = .zsql,
+    .version = "0.0.1",
+    .fingerprint = 0x1512c29b8b479d5,
+    .dependencies = .{
+        .zsql = .{
+            .url = "git+https://github.com/oswalpalash/zsql.git",
+            .hash = "zsql-0.0.2-bpasZTvuFQDuN8XlCWYC_DKjBQN7tF9UWrPjk-w8svUM",
+        },
+    },
+    .paths = .{""},
+}

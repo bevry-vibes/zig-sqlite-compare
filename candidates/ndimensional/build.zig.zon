@@ -1,0 +1,12 @@
+.{
+    .name = .ndimensional,
+    .version = "0.0.1",
+    .fingerprint = 0x999d5054dc8b905b,
+    .dependencies = .{
+        .sqlite = .{
+            .url = "git+https://github.com/nDimensional/zig-sqlite.git",
+            .hash = "sqlite-0.4.0-3530100-djiKTqCBAABomylmlMLWtzm9bE_8NQ1O7qVu6l9x6aP1",
+        },
+    },
+    .paths = .{""},
+}

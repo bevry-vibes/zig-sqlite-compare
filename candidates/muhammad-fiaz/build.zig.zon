@@ -1,0 +1,12 @@
+.{
+    .name = .muhammad_fiaz,
+    .version = "0.0.1",
+    .fingerprint = 0x5928095f310d3436,
+    .dependencies = .{
+        .sqlite = .{
+            .url = "git+https://github.com/muhammad-fiaz/sqlite.zig.git",
+            .hash = "sqlite-0.0.1-ZwgLxnk1BACG0vudLdeuHkr-NglfQcp0xORoaTFsiGvW",
+        },
+    },
+    .paths = .{""},
+}

@@ -1,0 +1,12 @@
+.{
+    .name = .zsqlx,
+    .version = "0.0.1",
+    .fingerprint = 0xce6fdfc3442e5cc0,
+    .dependencies = .{
+        .zsqlx = .{
+            .url = "git+https://github.com/blue-blaze/zsqlx.git",
+            .hash = "zsqlx-0.1.0-dO9119S2pADnrbE-g7fEkqj0eBsU8sAQoS8d0B3Tr7yV",
+        },
+    },
+    .paths = .{""},
+}
