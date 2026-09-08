@@ -24,7 +24,7 @@ See [The comparison](#the-comparison) for numbers, [Strategies](#strategies-comp
 
 ## The comparison
 
-All candidates built with `ReleaseSmall` + `strip = true` (the same flags [agent-detect](https://github.com/bevry-labs/agent-detect) ships its dist binaries with). Baseline = `agent-detect-*` ReleaseSmall stripped (a minimal Zig CLI binary with **zero** dependencies — not a SQLite lib):
+All candidates built with `ReleaseSmall` + `strip = true` (the same flags [agent-detect](https://github.com/bevry-vibes/agent-detect) ships its dist binaries with). Baseline = `agent-detect-*` ReleaseSmall stripped (a minimal Zig CLI binary with **zero** dependencies — not a SQLite lib):
 
 - linux-x86_64: 257,928 bytes
 - linux-aarch64: 245,344 bytes
@@ -35,7 +35,7 @@ Delta = measured binary size minus baseline.
 
 ### Size + correctness matrix
 
-Sorted by size, smallest first. License is what you'd inherit if you adopt the library. Deltas measured in this repo against the [agent-detect](https://github.com/bevry-labs/agent-detect) baseline (a minimal Zig CLI binary with **zero** dependencies, ReleaseSmall stripped).
+Sorted by size, smallest first. License is what you'd inherit if you adopt the library. Deltas measured in this repo against the [agent-detect](https://github.com/bevry-vibes/agent-detect) baseline (a minimal Zig CLI binary with **zero** dependencies, ReleaseSmall stripped).
 
 | Library | Strategy | Δ linux-x86_64 | Δ linux-aarch64 | Δ macos-aarch64 | Δ windows-x86_64 | Runs both queries on lorem-ipsum DB? | License |
 |---------|----------|----------------|-----------------|-----------------|------------------|---------------------------------------|---------|
@@ -192,7 +192,7 @@ zig build --prefix .
 - **The deltas are release-binary-size only.** API ergonomics, runtime speed, and memory usage are not measured here. See [Per-candidate detail](#per-candidate-detail) for qualitative tradeoffs.
 - **cli-shim's delta is negative.** `−107 KB` on macOS-aarch64 means cli-shim's binary is *smaller* than the agent-detect baseline itself — because no SQLite C code is linked. The work happens in a child process. If you need a self-contained dist binary, the cost is shipping `sqlite3` (~600KB), which erases the win.
 - **Zig 0.16 SELECT bugs in vrischmann/oswalpalash.** These are runtime issues, not linking cost. We test with INSERT/DELETE to force the SQLite C amalgamation to link, which still measures the full size cost. Runtime SELECT support is a separate fix needed upstream.
-- **Production flags verified.** `ReleaseSmall` + `strip = true` matches [agent-detect](https://github.com/bevry-labs/agent-detect)'s `zig build dist`. Strip diff vs non-strip is ≤0.1% in Zig 0.16.
+- **Production flags verified.** `ReleaseSmall` + `strip = true` matches [agent-detect](https://github.com/bevry-vibes/agent-detect)'s `zig build dist`. Strip diff vs non-strip is ≤0.1% in Zig 0.16.
 - **Test DB is lorem-ipsum.** Schema mirrors a typical agentic session DB (`project`/`session`/`message` with foreign keys) so any lib that introspects schema for type discovery still exercises realistic structure. See [DESIGN.md](DESIGN.md) for why we use a synthetic fixture.
 
 ---
@@ -244,5 +244,5 @@ and licensed under:
 
 ## See also
 
-- [agent-detect](https://github.com/bevry-labs/agent-detect) — the project that originally needed this comparison.
-- [skills](https://github.com/bevry-labs/skills) — commit and contribution conventions.
+- [agent-detect](https://github.com/bevry-vibes/agent-detect) — the project that originally needed this comparison.
+- [skills](https://github.com/bevry-vibes/skills) — commit and contribution conventions.
