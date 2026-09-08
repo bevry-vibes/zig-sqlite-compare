@@ -76,7 +76,7 @@ Common additions: `windows-aarch64`, `macos-x86_64`, `linux-x86` (32-bit).
 
 ## Commit conventions
 
-Follow [bevry-labs/skills/commits.md](https://github.com/bevry-labs/skills/blob/main/commits.md):
+Follow [bevry-vibes/skills/commits.md](https://github.com/bevry-vibes/skills/blob/main/commits.md):
 
 - Conventional Commits 1.0.0
 - One logical change per commit
